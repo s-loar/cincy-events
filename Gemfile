@@ -5,8 +5,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Use Bootstrap
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
+# fontawsome
+gem 'font-awesome-rails', '~> 4.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -23,6 +28,15 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Authentication
+gem 'devise', '~> 3.5', '>= 3.5.2'
+
+# forms
+gem 'simple_form', '~> 3.2'
+
+# The leaflet map
+gem 'leaflet-rails', '~> 0.7.4'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -31,6 +45,23 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Pry as your rails console
+gem 'pry-rails', '~> 0.3.4'
+
+group :development do
+  # Debugging gem
+  gem 'pry', '~> 0.10.3'
+  gem 'pry-nav', '~> 0.2.4'
+  # view emails in development
+  gem 'letter_opener', '~> 1.4', '>= 1.4.1'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3.3', '>= 3.3.3'
+  gem 'capybara', '~> 2.5'
+  gem 'factory_girl_rails', '~> 4.5'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,4 +73,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
